@@ -12,7 +12,7 @@ class Program
 
         if (!File.Exists(path))
         {
-            Console.WriteLine("Fayl tapılmadı.");
+            Console.WriteLine("Fayl tapilmadi.");
             return;
         }
 
@@ -51,7 +51,7 @@ class Program
             int read;
             while ((read = fs.Read(buffer, 0, buffer.Length)) > 0)
             {
-                int subBlock = 10; // kiçik hissələrə bölünmüş yazma
+                int subBlock = 10;
                 for (int i = 0; i < read; i += subBlock)
                 {
                     int chunk = Math.Min(subBlock, read - i);
@@ -85,7 +85,7 @@ class Program
         }
         else
         {
-            Console.WriteLine("\nTamamlandı!");
+            Console.WriteLine("\nTamamlandi!");
             File.Delete(backupPath);
         }
     }
